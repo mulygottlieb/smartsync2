@@ -10,7 +10,7 @@ generator client {
 model User {
   createdAt DateTime @default(now())
   firstName String?
-  fld1      String?  @muly @second
+  fld1      String?  @muly @second @third
   id        String   @id @default(cuid())
   lastName  String?
   password  String

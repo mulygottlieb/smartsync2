@@ -14,7 +14,7 @@ model User {
   id        String   @id @default(cuid())
   lastName  String?
   password  String
-  roles     Json
+  roles     Json     @mulycustom
   updatedAt DateTime @updatedAt
   username  String   @unique
 }

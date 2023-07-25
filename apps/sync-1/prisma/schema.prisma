@@ -10,11 +10,11 @@ generator client {
 model User {
   createdAt DateTime @default(now())
   firstName String?
-  fld1      String?  @muly @second @third @fourth @fifth @sixth @seventh @eight
+  fld1      String?  @muly @second @third @fourth @fifth @sixth @seventh @eight @nine
   id        String   @id @default(cuid())
   lastName  String?
   password  String
-  roles     Json     @mulycustom
+  roles     Json
   updatedAt DateTime @updatedAt
   username  String   @unique
 }

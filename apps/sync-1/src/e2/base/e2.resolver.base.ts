@@ -18,6 +18,9 @@ import * as gqlACGuard from "../../auth/gqlAC.guard";
 import { GqlDefaultAuthGuard } from "../../auth/gqlDefaultAuth.guard";
 import * as common from "@nestjs/common";
 import { AclFilterResponseInterceptor } from "../../interceptors/aclFilterResponse.interceptor";
+import { AclValidateRequestInterceptor } from "../../interceptors/aclValidateRequest.interceptor";
+import { CreateE2Args } from "./CreateE2Args";
+import { UpdateE2Args } from "./UpdateE2Args";
 import { DeleteE2Args } from "./DeleteE2Args";
 import { E2CountArgs } from "./E2CountArgs";
 import { E2FindManyArgs } from "./E2FindManyArgs";
@@ -69,6 +72,43 @@ export class E2ResolverBase {
       return null;
     }
     return result;
+  }
+
+  @common.UseInterceptors(AclValidateRequestInterceptor)
+  @graphql.Mutation(() => E2)
+  @nestAccessControl.UseRoles({
+    resource: "E2",
+    action: "create",
+    possession: "any",
+  })
+  async createE2(@graphql.Args() args: CreateE2Args): Promise<E2> {
+    return await this.service.create({
+      ...args,
+      data: args.data,
+    });
+  }
+
+  @common.UseInterceptors(AclValidateRequestInterceptor)
+  @graphql.Mutation(() => E2)
+  @nestAccessControl.UseRoles({
+    resource: "E2",
+    action: "update",
+    possession: "any",
+  })
+  async updateE2(@graphql.Args() args: UpdateE2Args): Promise<E2 | null> {
+    try {
+      return await this.service.update({
+        ...args,
+        data: args.data,
+      });
+    } catch (error) {
+      if (isRecordNotFoundError(error)) {
+        throw new apollo.ApolloError(
+          `No resource was found for ${JSON.stringify(args.where)}`
+        );
+      }
+      throw error;
+    }
   }
 
   @graphql.Mutation(() => E2)

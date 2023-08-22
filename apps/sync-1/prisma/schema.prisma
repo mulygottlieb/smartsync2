@@ -22,6 +22,6 @@ model User {
 model E2 {
   createdAt DateTime @default(now())
   fld1      String?
-  id        String   @id @default(cuid())
+  id        String   @id @default(cuid()) @muly22082023
   updatedAt DateTime @updatedAt
 }

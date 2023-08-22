@@ -1,1 +1,3 @@
-export type E2CreateInput = {};
+export type E2CreateInput = {
+  fld1?: string | null;
+};

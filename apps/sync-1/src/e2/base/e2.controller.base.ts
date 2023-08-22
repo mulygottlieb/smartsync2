@@ -51,6 +51,7 @@ export class E2ControllerBase {
       data: data,
       select: {
         createdAt: true,
+        fld1: true,
         id: true,
         updatedAt: true,
       },
@@ -75,6 +76,7 @@ export class E2ControllerBase {
       ...args,
       select: {
         createdAt: true,
+        fld1: true,
         id: true,
         updatedAt: true,
       },
@@ -100,6 +102,7 @@ export class E2ControllerBase {
       where: params,
       select: {
         createdAt: true,
+        fld1: true,
         id: true,
         updatedAt: true,
       },
@@ -134,6 +137,7 @@ export class E2ControllerBase {
         data: data,
         select: {
           createdAt: true,
+          fld1: true,
           id: true,
           updatedAt: true,
         },
@@ -165,6 +169,7 @@ export class E2ControllerBase {
         where: params,
         select: {
           createdAt: true,
+          fld1: true,
           id: true,
           updatedAt: true,
         },

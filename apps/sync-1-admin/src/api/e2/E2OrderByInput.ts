@@ -9,6 +9,7 @@ export type E2OrderByInput = {
   fld23?: SortOrder;
   fld3?: SortOrder;
   fld33?: SortOrder;
+  fld34?: SortOrder;
   fld4?: SortOrder;
   fld44?: SortOrder;
   fld45?: SortOrder;

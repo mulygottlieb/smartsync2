@@ -9,6 +9,7 @@ export type E2WhereInput = {
   fld23?: StringNullableFilter;
   fld3?: StringNullableFilter;
   fld33?: StringNullableFilter;
+  fld34?: StringNullableFilter;
   fld4?: StringNullableFilter;
   fld44?: StringNullableFilter;
   fld45?: StringNullableFilter;

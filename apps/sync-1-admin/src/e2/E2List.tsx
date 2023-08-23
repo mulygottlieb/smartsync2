@@ -20,6 +20,7 @@ export const E2List = (props: ListProps): React.ReactElement => {
         <TextField label="fld23" source="fld23" />
         <TextField label="fld3" source="fld3" />
         <TextField label="fld33" source="fld33" />
+        <TextField label="fld34" source="fld34" />
         <TextField label="fld4" source="fld4" />
         <TextField label="fld44" source="fld44" />
         <TextField label="fld45" source="fld45" />

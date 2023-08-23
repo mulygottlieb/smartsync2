@@ -104,6 +104,17 @@ class E2WhereInput {
   @Field(() => StringNullableFilter, {
     nullable: true,
   })
+  fld34?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
   fld4?: StringNullableFilter;
 
   @ApiProperty({

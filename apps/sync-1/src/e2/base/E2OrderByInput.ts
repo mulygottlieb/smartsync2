@@ -116,6 +116,17 @@ class E2OrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  fld34?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   fld4?: SortOrder;
 
   @ApiProperty({

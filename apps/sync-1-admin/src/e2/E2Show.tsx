@@ -21,6 +21,7 @@ export const E2Show = (props: ShowProps): React.ReactElement => {
         <TextField label="fld33" source="fld33" />
         <TextField label="fld4" source="fld4" />
         <TextField label="fld44" source="fld44" />
+        <TextField label="fld45" source="fld45" />
         <TextField label="ID" source="id" />
         <DateField source="updatedAt" label="Updated At" />
       </SimpleShowLayout>

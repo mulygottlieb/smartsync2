@@ -124,6 +124,17 @@ class E2 {
   fld44!: string | null;
 
   @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  fld45!: string | null;
+
+  @ApiProperty({
     required: true,
     type: String,
   })

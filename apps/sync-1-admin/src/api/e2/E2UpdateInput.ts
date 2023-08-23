@@ -9,4 +9,5 @@ export type E2UpdateInput = {
   fld4?: string | null;
   fld44?: string | null;
   fld45?: string | null;
+  fld46?: string | null;
 };

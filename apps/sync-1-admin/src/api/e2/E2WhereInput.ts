@@ -12,5 +12,6 @@ export type E2WhereInput = {
   fld4?: StringNullableFilter;
   fld44?: StringNullableFilter;
   fld45?: StringNullableFilter;
+  fld46?: StringNullableFilter;
   id?: StringFilter;
 };

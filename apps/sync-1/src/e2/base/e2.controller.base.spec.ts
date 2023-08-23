@@ -21,12 +21,18 @@ const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
   fld1: "exampleFld1",
+  fld2: "exampleFld2",
+  fld3: "exampleFld3",
+  fld4: "exampleFld4",
   id: "exampleId",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
   fld1: "exampleFld1",
+  fld2: "exampleFld2",
+  fld3: "exampleFld3",
+  fld4: "exampleFld4",
   id: "exampleId",
   updatedAt: new Date(),
 };
@@ -34,6 +40,9 @@ const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
     fld1: "exampleFld1",
+    fld2: "exampleFld2",
+    fld3: "exampleFld3",
+    fld4: "exampleFld4",
     id: "exampleId",
     updatedAt: new Date(),
   },
@@ -41,6 +50,9 @@ const FIND_MANY_RESULT = [
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
   fld1: "exampleFld1",
+  fld2: "exampleFld2",
+  fld3: "exampleFld3",
+  fld4: "exampleFld4",
   id: "exampleId",
   updatedAt: new Date(),
 };

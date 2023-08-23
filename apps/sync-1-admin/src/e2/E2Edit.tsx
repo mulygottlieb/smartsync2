@@ -13,6 +13,7 @@ export const E2Edit = (props: EditProps): React.ReactElement => {
         <TextInput label="fld3" source="fld3" />
         <TextInput label="fld33" source="fld33" />
         <TextInput label="fld4" source="fld4" />
+        <TextInput label="fld44" source="fld44" />
       </SimpleForm>
     </Edit>
   );

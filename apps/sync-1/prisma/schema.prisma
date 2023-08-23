@@ -29,6 +29,7 @@ model E2 {
   fld3      String?
   fld33     String?
   fld4      String?
+  fld44     String?
   id        String   @id @default(cuid())
   updatedAt DateTime @updatedAt
 }

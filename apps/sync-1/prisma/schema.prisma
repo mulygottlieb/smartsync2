@@ -25,7 +25,7 @@ model E2 {
   fld2      String?
   fld3      String?
   fld4      String?
-  id        String   @id @default(cuid())
+  id        String   @id @default(cuid()) @muly22082023
   updatedAt DateTime @updatedAt
 }
 

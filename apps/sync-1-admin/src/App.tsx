@@ -13,6 +13,10 @@ import { E2List } from "./e2/E2List";
 import { E2Create } from "./e2/E2Create";
 import { E2Edit } from "./e2/E2Edit";
 import { E2Show } from "./e2/E2Show";
+import { E3List } from "./e3/E3List";
+import { E3Create } from "./e3/E3Create";
+import { E3Edit } from "./e3/E3Edit";
+import { E3Show } from "./e3/E3Show";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -52,6 +56,13 @@ const App = (): React.ReactElement => {
           edit={E2Edit}
           create={E2Create}
           show={E2Show}
+        />
+        <Resource
+          name="E3"
+          list={E3List}
+          edit={E3Edit}
+          create={E3Create}
+          show={E3Show}
         />
       </Admin>
     </div>

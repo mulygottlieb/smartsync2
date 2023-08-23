@@ -25,3 +25,9 @@ model E2 {
   id        String   @id @default(cuid()) @muly22082023
   updatedAt DateTime @updatedAt
 }
+
+model E3 {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}

@@ -4,6 +4,7 @@ export type E2 = {
   fld11: string | null;
   fld2: string | null;
   fld22: string | null;
+  fld23: string | null;
   fld3: string | null;
   fld4: string | null;
   id: string;

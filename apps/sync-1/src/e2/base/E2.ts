@@ -77,6 +77,17 @@ class E2 {
   @Field(() => String, {
     nullable: true,
   })
+  fld23!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   fld3!: string | null;
 
   @ApiProperty({

@@ -9,6 +9,7 @@ export const E2Edit = (props: EditProps): React.ReactElement => {
         <TextInput label="fld11" source="fld11" />
         <TextInput label="fld2" source="fld2" />
         <TextInput label="fld22" source="fld22" />
+        <TextInput label="fld23" source="fld23" />
         <TextInput label="fld3" source="fld3" />
         <TextInput label="fld4" source="fld4" />
       </SimpleForm>

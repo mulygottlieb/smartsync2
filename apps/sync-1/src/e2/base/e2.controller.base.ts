@@ -52,6 +52,9 @@ export class E2ControllerBase {
       select: {
         createdAt: true,
         fld1: true,
+        fld2: true,
+        fld3: true,
+        fld4: true,
         id: true,
         updatedAt: true,
       },
@@ -77,6 +80,9 @@ export class E2ControllerBase {
       select: {
         createdAt: true,
         fld1: true,
+        fld2: true,
+        fld3: true,
+        fld4: true,
         id: true,
         updatedAt: true,
       },
@@ -103,6 +109,9 @@ export class E2ControllerBase {
       select: {
         createdAt: true,
         fld1: true,
+        fld2: true,
+        fld3: true,
+        fld4: true,
         id: true,
         updatedAt: true,
       },
@@ -138,6 +147,9 @@ export class E2ControllerBase {
         select: {
           createdAt: true,
           fld1: true,
+          fld2: true,
+          fld3: true,
+          fld4: true,
           id: true,
           updatedAt: true,
         },
@@ -170,6 +182,9 @@ export class E2ControllerBase {
         select: {
           createdAt: true,
           fld1: true,
+          fld2: true,
+          fld3: true,
+          fld4: true,
           id: true,
           updatedAt: true,
         },

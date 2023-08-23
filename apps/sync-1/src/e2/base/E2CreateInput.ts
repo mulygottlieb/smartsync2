@@ -90,6 +90,17 @@ class E2CreateInput {
   @Field(() => String, {
     nullable: true,
   })
+  fld33?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   fld4?: string | null;
 }
 

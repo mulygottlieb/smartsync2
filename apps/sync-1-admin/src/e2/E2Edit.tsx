@@ -15,6 +15,7 @@ export const E2Edit = (props: EditProps): React.ReactElement => {
         <TextInput label="fld4" source="fld4" />
         <TextInput label="fld44" source="fld44" />
         <TextInput label="fld45" source="fld45" />
+        <TextInput label="fld46" source="fld46" />
       </SimpleForm>
     </Edit>
   );

@@ -10,6 +10,7 @@ export type E2 = {
   fld4: string | null;
   fld44: string | null;
   fld45: string | null;
+  fld46: string | null;
   id: string;
   updatedAt: Date;
 };

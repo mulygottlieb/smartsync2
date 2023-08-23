@@ -30,6 +30,7 @@ const CREATE_INPUT = {
   fld4: "exampleFld4",
   fld44: "exampleFld44",
   fld45: "exampleFld45",
+  fld46: "exampleFld46",
   id: "exampleId",
   updatedAt: new Date(),
 };
@@ -45,6 +46,7 @@ const CREATE_RESULT = {
   fld4: "exampleFld4",
   fld44: "exampleFld44",
   fld45: "exampleFld45",
+  fld46: "exampleFld46",
   id: "exampleId",
   updatedAt: new Date(),
 };
@@ -61,6 +63,7 @@ const FIND_MANY_RESULT = [
     fld4: "exampleFld4",
     fld44: "exampleFld44",
     fld45: "exampleFld45",
+    fld46: "exampleFld46",
     id: "exampleId",
     updatedAt: new Date(),
   },
@@ -77,6 +80,7 @@ const FIND_ONE_RESULT = {
   fld4: "exampleFld4",
   fld44: "exampleFld44",
   fld45: "exampleFld45",
+  fld46: "exampleFld46",
   id: "exampleId",
   updatedAt: new Date(),
 };

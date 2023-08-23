@@ -23,6 +23,7 @@ export const E2List = (props: ListProps): React.ReactElement => {
         <TextField label="fld4" source="fld4" />
         <TextField label="fld44" source="fld44" />
         <TextField label="fld45" source="fld45" />
+        <TextField label="fld46" source="fld46" />
         <TextField label="ID" source="id" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>

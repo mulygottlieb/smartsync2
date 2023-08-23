@@ -124,6 +124,17 @@ class E2UpdateInput {
     nullable: true,
   })
   fld45?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  fld46?: string | null;
 }
 
 export { E2UpdateInput as E2UpdateInput };

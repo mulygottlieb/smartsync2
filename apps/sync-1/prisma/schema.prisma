@@ -23,14 +23,14 @@ model E2 {
   createdAt DateTime @default(now())
   fld1      String?  @fld1attrib1 @fld1custommuly1
   fld11     String?
-  fld2      String?
+  fld2      String?  @fld2customattribmuly2
   fld22     String?
   fld23     String?  @fld23customonampbranch
   fld3      String?
   fld33     String?
   fld4      String?
   fld44     String?
-  id        String   @id @default(cuid())
+  id        String   @id @default(cuid()) @muly22082023
   updatedAt DateTime @updatedAt
 }
 

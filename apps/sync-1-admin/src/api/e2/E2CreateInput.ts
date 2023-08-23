@@ -8,4 +8,5 @@ export type E2CreateInput = {
   fld33?: string | null;
   fld4?: string | null;
   fld44?: string | null;
+  fld45?: string | null;
 };

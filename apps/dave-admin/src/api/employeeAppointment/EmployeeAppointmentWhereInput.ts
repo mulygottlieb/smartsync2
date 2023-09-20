@@ -1,0 +1,32 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { EmployeeWhereUniqueInput } from "../employee/EmployeeWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { AppointmentEmployeeListRelationFilter } from "../appointmentEmployee/AppointmentEmployeeListRelationFilter";
+
+export type EmployeeAppointmentWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  agenda?: StringFilter;
+  description?: StringNullableFilter;
+  location?: StringNullableFilter;
+  startDateTime?: DateTimeFilter;
+  endDateTime?: DateTimeFilter;
+  bufferTimeStart?: BooleanNullableFilter;
+  bufferTimeEnd?: BooleanNullableFilter;
+  bufferTimeInMins?: IntNullableFilter;
+  breakTimeInMins?: IntNullableFilter;
+  breakStartTime?: DateTimeNullableFilter;
+  emails?: StringNullableFilter;
+  status?: StringNullableFilter;
+  employee?: EmployeeWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+  appointmentEmployee?: AppointmentEmployeeListRelationFilter;
+};

@@ -1,0 +1,30 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { IntFilter } from "../../util/IntFilter";
+import { EquipmentSharingPolicyWhereUniqueInput } from "../equipmentSharingPolicy/EquipmentSharingPolicyWhereUniqueInput";
+import { EquipmentWhereUniqueInput } from "../equipment/EquipmentWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { EquipmentSharesEmployeeListRelationFilter } from "../equipmentSharesEmployee/EquipmentSharesEmployeeListRelationFilter";
+import { EquipmentSharesTeamListRelationFilter } from "../equipmentSharesTeam/EquipmentSharesTeamListRelationFilter";
+
+export type EquipmentSharingWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  name?: StringNullableFilter;
+  shareRequestDay?: DateTimeNullableFilter;
+  shareStartDay?: DateTimeNullableFilter;
+  shareEndDay?: DateTimeNullableFilter;
+  status?: IntFilter;
+  createdBy?: StringNullableFilter;
+  createdByName?: StringNullableFilter;
+  equipmentSharingPolicy?: EquipmentSharingPolicyWhereUniqueInput;
+  equipment?: EquipmentWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+  equipmentSharesEmployees?: EquipmentSharesEmployeeListRelationFilter;
+  equipmentSharesTeams?: EquipmentSharesTeamListRelationFilter;
+};

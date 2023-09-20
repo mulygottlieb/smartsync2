@@ -1,0 +1,31 @@
+import { OrganizationTeamWhereUniqueInput } from "../organizationTeam/OrganizationTeamWhereUniqueInput";
+import { TaskWhereUniqueInput } from "../task/TaskWhereUniqueInput";
+import { OrganizationProjectWhereUniqueInput } from "../organizationProject/OrganizationProjectWhereUniqueInput";
+import { EmployeeWhereUniqueInput } from "../employee/EmployeeWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { OrganizationContactWhereUniqueInput } from "../organizationContact/OrganizationContactWhereUniqueInput";
+import { TimesheetWhereUniqueInput } from "../timesheet/TimesheetWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { TimeSlotTimeLogCreateNestedManyWithoutTimeLogsInput } from "./TimeSlotTimeLogCreateNestedManyWithoutTimeLogsInput";
+
+export type TimeLogCreateInput = {
+  startedAt?: Date | null;
+  stoppedAt?: Date | null;
+  logType: string;
+  source: string;
+  description?: string | null;
+  reason?: string | null;
+  isBillable: boolean;
+  deletedAt?: Date | null;
+  isRunning?: boolean | null;
+  version?: string | null;
+  organizationTeam?: OrganizationTeamWhereUniqueInput | null;
+  task?: TaskWhereUniqueInput | null;
+  organizationProject?: OrganizationProjectWhereUniqueInput | null;
+  employee: EmployeeWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput | null;
+  organizationContact?: OrganizationContactWhereUniqueInput | null;
+  timesheet?: TimesheetWhereUniqueInput | null;
+  tenant?: TenantWhereUniqueInput | null;
+  timeSlotTimeLogs?: TimeSlotTimeLogCreateNestedManyWithoutTimeLogsInput;
+};

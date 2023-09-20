@@ -42,7 +42,8 @@
     "swagger-ui-express": "4.3.0",
     "ts-node": "10.9.1",
     "type-fest": "0.13.1",
-    "validator": "^13.9.0"
+    "validator": "^13.9.0",
+    "decimal.js": "10.4.3"
   },
   "devDependencies": {
     "@nestjs/cli": "8.2.5",

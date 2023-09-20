@@ -1,0 +1,35 @@
+import { OrganizationProjectWhereUniqueInput } from "../organizationProject/OrganizationProjectWhereUniqueInput";
+import { GoalKpiWhereUniqueInput } from "../goalKpi/GoalKpiWhereUniqueInput";
+import { EmployeeWhereUniqueInput } from "../employee/EmployeeWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TaskWhereUniqueInput } from "../task/TaskWhereUniqueInput";
+import { GoalCreateNestedManyWithoutKeyResultsInput } from "./GoalCreateNestedManyWithoutKeyResultsInput";
+import { GoalWhereUniqueInput } from "../goal/GoalWhereUniqueInput";
+import { KeyResultUpdateCreateNestedManyWithoutKeyResultsInput } from "./KeyResultUpdateCreateNestedManyWithoutKeyResultsInput";
+
+export type KeyResultCreateInput = {
+  name: string;
+  description: string;
+  typeField: string;
+  targetValue?: number | null;
+  initialValue?: number | null;
+  unit?: string | null;
+  update: number;
+  progress: number;
+  deadline: string;
+  hardDeadline?: Date | null;
+  softDeadline?: Date | null;
+  status: string;
+  weight?: string | null;
+  organizationProject?: OrganizationProjectWhereUniqueInput | null;
+  goalKpi?: GoalKpiWhereUniqueInput | null;
+  employeeKeyResultOwnerIdToemployee: EmployeeWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput | null;
+  employeeKeyResultLeadIdToemployee?: EmployeeWhereUniqueInput | null;
+  organization?: OrganizationWhereUniqueInput | null;
+  task?: TaskWhereUniqueInput | null;
+  goalGoalAlignedKeyResultIdTokeyResult?: GoalCreateNestedManyWithoutKeyResultsInput;
+  goalKeyResultGoalIdTogoal?: GoalWhereUniqueInput | null;
+  keyResultUpdate?: KeyResultUpdateCreateNestedManyWithoutKeyResultsInput;
+};

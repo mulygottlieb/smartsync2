@@ -1,0 +1,33 @@
+import { Tenant } from "../tenant/Tenant";
+import { Organization } from "../organization/Organization";
+import { ProductType } from "../productType/ProductType";
+import { ImageAsset } from "../imageAsset/ImageAsset";
+import { ProductCategory } from "../productCategory/ProductCategory";
+import { InvoiceItem } from "../invoiceItem/InvoiceItem";
+import { ProductGalleryItem } from "../productGalleryItem/ProductGalleryItem";
+import { ProductOptionGroup } from "../productOptionGroup/ProductOptionGroup";
+import { ProductTranslation } from "../productTranslation/ProductTranslation";
+import { ProductVariant } from "../productVariant/ProductVariant";
+import { TagProduct } from "../tagProduct/TagProduct";
+import { WarehouseProduct } from "../warehouseProduct/WarehouseProduct";
+
+export type Product = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  enabled: boolean;
+  code: string;
+  imageUrl: string | null;
+  tenant?: Tenant | null;
+  organization?: Organization | null;
+  productType?: ProductType | null;
+  imageAsset?: ImageAsset | null;
+  productCategory?: ProductCategory | null;
+  invoiceItem?: Array<InvoiceItem>;
+  productGalleryItem?: Array<ProductGalleryItem>;
+  productOptionGroup?: Array<ProductOptionGroup>;
+  productTranslation?: Array<ProductTranslation>;
+  productVariant?: Array<ProductVariant>;
+  tagProduct?: Array<TagProduct>;
+  warehouseProduct?: Array<WarehouseProduct>;
+};

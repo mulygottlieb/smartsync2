@@ -1,0 +1,30 @@
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { ProductTypeWhereUniqueInput } from "../productType/ProductTypeWhereUniqueInput";
+import { ImageAssetWhereUniqueInput } from "../imageAsset/ImageAssetWhereUniqueInput";
+import { ProductCategoryWhereUniqueInput } from "../productCategory/ProductCategoryWhereUniqueInput";
+import { InvoiceItemCreateNestedManyWithoutProductsInput } from "./InvoiceItemCreateNestedManyWithoutProductsInput";
+import { ProductGalleryItemCreateNestedManyWithoutProductsInput } from "./ProductGalleryItemCreateNestedManyWithoutProductsInput";
+import { ProductOptionGroupCreateNestedManyWithoutProductsInput } from "./ProductOptionGroupCreateNestedManyWithoutProductsInput";
+import { ProductTranslationCreateNestedManyWithoutProductsInput } from "./ProductTranslationCreateNestedManyWithoutProductsInput";
+import { ProductVariantCreateNestedManyWithoutProductsInput } from "./ProductVariantCreateNestedManyWithoutProductsInput";
+import { TagProductCreateNestedManyWithoutProductsInput } from "./TagProductCreateNestedManyWithoutProductsInput";
+import { WarehouseProductCreateNestedManyWithoutProductsInput } from "./WarehouseProductCreateNestedManyWithoutProductsInput";
+
+export type ProductCreateInput = {
+  enabled: boolean;
+  code: string;
+  imageUrl?: string | null;
+  tenant?: TenantWhereUniqueInput | null;
+  organization?: OrganizationWhereUniqueInput | null;
+  productType?: ProductTypeWhereUniqueInput | null;
+  imageAsset?: ImageAssetWhereUniqueInput | null;
+  productCategory?: ProductCategoryWhereUniqueInput | null;
+  invoiceItem?: InvoiceItemCreateNestedManyWithoutProductsInput;
+  productGalleryItem?: ProductGalleryItemCreateNestedManyWithoutProductsInput;
+  productOptionGroup?: ProductOptionGroupCreateNestedManyWithoutProductsInput;
+  productTranslation?: ProductTranslationCreateNestedManyWithoutProductsInput;
+  productVariant?: ProductVariantCreateNestedManyWithoutProductsInput;
+  tagProduct?: TagProductCreateNestedManyWithoutProductsInput;
+  warehouseProduct?: WarehouseProductCreateNestedManyWithoutProductsInput;
+};

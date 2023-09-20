@@ -1,0 +1,31 @@
+import { OrganizationProjectWhereUniqueInput } from "../organizationProject/OrganizationProjectWhereUniqueInput";
+import { OrganizationTeamWhereUniqueInput } from "../organizationTeam/OrganizationTeamWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+
+export type OrganizationTaskSettingCreateInput = {
+  isTasksCommentsEnabled: boolean;
+  isTasksPrivacyEnabled: boolean;
+  isTasksMultipleAssigneesEnabled: boolean;
+  isTasksManualTimeEnabled: boolean;
+  isTasksGroupEstimationEnabled: boolean;
+  isTasksHistoryEnabled: boolean;
+  isTasksAcceptanceCriteriaEnabled: boolean;
+  isTasksDraftsEnabled: boolean;
+  isTasksEstimationInHoursEnabled: boolean;
+  isTasksEstimationInStoryPointsEnabled: boolean;
+  isTasksProofOfCompletionEnabled: boolean;
+  tasksProofOfCompletionType: string;
+  isTasksLinkedEnabled: boolean;
+  isTasksNotifyLeftEnabled: boolean;
+  tasksNotifyLeftPeriodDays: number;
+  isTasksAutoCloseEnabled: boolean;
+  tasksAutoClosePeriodDays: number;
+  isTasksAutoArchiveEnabled: boolean;
+  tasksAutoArchivePeriodDays: number;
+  isTasksAutoStatusEnabled: boolean;
+  organizationProject?: OrganizationProjectWhereUniqueInput | null;
+  organizationTeam?: OrganizationTeamWhereUniqueInput | null;
+  tenant?: TenantWhereUniqueInput | null;
+  organization?: OrganizationWhereUniqueInput | null;
+};

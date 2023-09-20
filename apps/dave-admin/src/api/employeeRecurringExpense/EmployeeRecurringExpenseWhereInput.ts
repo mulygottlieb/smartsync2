@@ -1,0 +1,31 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { IntFilter } from "../../util/IntFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { DecimalFilter } from "../../util/DecimalFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { EmployeeWhereUniqueInput } from "../employee/EmployeeWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+
+export type EmployeeRecurringExpenseWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  startDay?: IntFilter;
+  startMonth?: IntFilter;
+  startYear?: IntFilter;
+  startDate?: DateTimeFilter;
+  endDay?: IntNullableFilter;
+  endMonth?: IntNullableFilter;
+  endYear?: IntNullableFilter;
+  endDate?: DateTimeNullableFilter;
+  categoryName?: StringFilter;
+  value?: DecimalFilter;
+  currency?: StringFilter;
+  parentRecurringExpenseId?: StringNullableFilter;
+  employee?: EmployeeWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+};

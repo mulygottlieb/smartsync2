@@ -1,0 +1,31 @@
+import { SortOrder } from "../../util/SortOrder";
+
+export type OrganizationTaskSettingOrderByInput = {
+  isTasksCommentsEnabled?: SortOrder;
+  id?: SortOrder;
+  createdAt?: SortOrder;
+  updatedAt?: SortOrder;
+  isTasksPrivacyEnabled?: SortOrder;
+  isTasksMultipleAssigneesEnabled?: SortOrder;
+  isTasksManualTimeEnabled?: SortOrder;
+  isTasksGroupEstimationEnabled?: SortOrder;
+  isTasksHistoryEnabled?: SortOrder;
+  isTasksAcceptanceCriteriaEnabled?: SortOrder;
+  isTasksDraftsEnabled?: SortOrder;
+  isTasksEstimationInHoursEnabled?: SortOrder;
+  isTasksEstimationInStoryPointsEnabled?: SortOrder;
+  isTasksProofOfCompletionEnabled?: SortOrder;
+  tasksProofOfCompletionType?: SortOrder;
+  isTasksLinkedEnabled?: SortOrder;
+  isTasksNotifyLeftEnabled?: SortOrder;
+  tasksNotifyLeftPeriodDays?: SortOrder;
+  isTasksAutoCloseEnabled?: SortOrder;
+  tasksAutoClosePeriodDays?: SortOrder;
+  isTasksAutoArchiveEnabled?: SortOrder;
+  tasksAutoArchivePeriodDays?: SortOrder;
+  isTasksAutoStatusEnabled?: SortOrder;
+  projectId?: SortOrder;
+  organizationTeamId?: SortOrder;
+  tenantId?: SortOrder;
+  organizationId?: SortOrder;
+};

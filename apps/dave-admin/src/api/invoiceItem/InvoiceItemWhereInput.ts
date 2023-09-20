@@ -1,0 +1,33 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { DecimalFilter } from "../../util/DecimalFilter";
+import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
+import { OrganizationProjectWhereUniqueInput } from "../organizationProject/OrganizationProjectWhereUniqueInput";
+import { InvoiceWhereUniqueInput } from "../invoice/InvoiceWhereUniqueInput";
+import { TaskWhereUniqueInput } from "../task/TaskWhereUniqueInput";
+import { ExpenseWhereUniqueInput } from "../expense/ExpenseWhereUniqueInput";
+import { EmployeeWhereUniqueInput } from "../employee/EmployeeWhereUniqueInput";
+import { ProductWhereUniqueInput } from "../product/ProductWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+
+export type InvoiceItemWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  description?: StringNullableFilter;
+  price?: DecimalFilter;
+  quantity?: DecimalFilter;
+  totalValue?: DecimalFilter;
+  applyTax?: BooleanNullableFilter;
+  applyDiscount?: BooleanNullableFilter;
+  organizationProject?: OrganizationProjectWhereUniqueInput;
+  invoice?: InvoiceWhereUniqueInput;
+  task?: TaskWhereUniqueInput;
+  expense?: ExpenseWhereUniqueInput;
+  employee?: EmployeeWhereUniqueInput;
+  product?: ProductWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+};

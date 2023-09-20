@@ -1,0 +1,36 @@
+import { Decimal } from "decimal.js";
+import { Tenant } from "../tenant/Tenant";
+import { Organization } from "../organization/Organization";
+import { Candidate } from "../candidate/Candidate";
+import { Employee } from "../employee/Employee";
+import { Merchant } from "../merchant/Merchant";
+import { OrganizationContact } from "../organizationContact/OrganizationContact";
+import { Warehouse } from "../warehouse/Warehouse";
+
+export type Contact = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  name: string | null;
+  firstName: string | null;
+  lastName: string | null;
+  country: string | null;
+  city: string | null;
+  address: string | null;
+  address2: string | null;
+  postcode: string | null;
+  regionCode: string | null;
+  fax: string | null;
+  fiscalInformation: string | null;
+  website: string | null;
+  latitude: Decimal | null;
+  longitude: Decimal | null;
+  tenant?: Tenant | null;
+  organizationContactOrganizationIdToorganization?: Organization | null;
+  organizationOrganizationContactIdTocontact?: Array<Organization>;
+  candidate?: Candidate | null;
+  employee?: Employee | null;
+  merchant?: Merchant | null;
+  organizationContact?: OrganizationContact | null;
+  warehouse?: Warehouse | null;
+};

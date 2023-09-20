@@ -1,0 +1,37 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { BooleanFilter } from "../../util/BooleanFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { ProductTypeWhereUniqueInput } from "../productType/ProductTypeWhereUniqueInput";
+import { ImageAssetWhereUniqueInput } from "../imageAsset/ImageAssetWhereUniqueInput";
+import { ProductCategoryWhereUniqueInput } from "../productCategory/ProductCategoryWhereUniqueInput";
+import { InvoiceItemListRelationFilter } from "../invoiceItem/InvoiceItemListRelationFilter";
+import { ProductGalleryItemListRelationFilter } from "../productGalleryItem/ProductGalleryItemListRelationFilter";
+import { ProductOptionGroupListRelationFilter } from "../productOptionGroup/ProductOptionGroupListRelationFilter";
+import { ProductTranslationListRelationFilter } from "../productTranslation/ProductTranslationListRelationFilter";
+import { ProductVariantListRelationFilter } from "../productVariant/ProductVariantListRelationFilter";
+import { TagProductListRelationFilter } from "../tagProduct/TagProductListRelationFilter";
+import { WarehouseProductListRelationFilter } from "../warehouseProduct/WarehouseProductListRelationFilter";
+
+export type ProductWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  enabled?: BooleanFilter;
+  code?: StringFilter;
+  imageUrl?: StringNullableFilter;
+  tenant?: TenantWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+  productType?: ProductTypeWhereUniqueInput;
+  imageAsset?: ImageAssetWhereUniqueInput;
+  productCategory?: ProductCategoryWhereUniqueInput;
+  invoiceItem?: InvoiceItemListRelationFilter;
+  productGalleryItem?: ProductGalleryItemListRelationFilter;
+  productOptionGroup?: ProductOptionGroupListRelationFilter;
+  productTranslation?: ProductTranslationListRelationFilter;
+  productVariant?: ProductVariantListRelationFilter;
+  tagProduct?: TagProductListRelationFilter;
+  warehouseProduct?: WarehouseProductListRelationFilter;
+};

@@ -1,0 +1,34 @@
+import { OrganizationProject } from "../organizationProject/OrganizationProject";
+import { OrganizationTeam } from "../organizationTeam/OrganizationTeam";
+import { Tenant } from "../tenant/Tenant";
+import { Organization } from "../organization/Organization";
+
+export type OrganizationTaskSetting = {
+  isTasksCommentsEnabled: boolean;
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  isTasksPrivacyEnabled: boolean;
+  isTasksMultipleAssigneesEnabled: boolean;
+  isTasksManualTimeEnabled: boolean;
+  isTasksGroupEstimationEnabled: boolean;
+  isTasksHistoryEnabled: boolean;
+  isTasksAcceptanceCriteriaEnabled: boolean;
+  isTasksDraftsEnabled: boolean;
+  isTasksEstimationInHoursEnabled: boolean;
+  isTasksEstimationInStoryPointsEnabled: boolean;
+  isTasksProofOfCompletionEnabled: boolean;
+  tasksProofOfCompletionType: string;
+  isTasksLinkedEnabled: boolean;
+  isTasksNotifyLeftEnabled: boolean;
+  tasksNotifyLeftPeriodDays: number;
+  isTasksAutoCloseEnabled: boolean;
+  tasksAutoClosePeriodDays: number;
+  isTasksAutoArchiveEnabled: boolean;
+  tasksAutoArchivePeriodDays: number;
+  isTasksAutoStatusEnabled: boolean;
+  organizationProject?: OrganizationProject | null;
+  organizationTeam?: OrganizationTeam | null;
+  tenant?: Tenant | null;
+  organization?: Organization | null;
+};

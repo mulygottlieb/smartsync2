@@ -1,0 +1,30 @@
+import { User } from "../user/User";
+import { Organization } from "../organization/Organization";
+import { Tenant } from "../tenant/Tenant";
+import { Role } from "../role/Role";
+import { InviteOrganizationContact } from "../inviteOrganizationContact/InviteOrganizationContact";
+import { InviteOrganizationDepartment } from "../inviteOrganizationDepartment/InviteOrganizationDepartment";
+import { InviteOrganizationProject } from "../inviteOrganizationProject/InviteOrganizationProject";
+import { InviteOrganizationTeam } from "../inviteOrganizationTeam/InviteOrganizationTeam";
+
+export type Invite = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  token: string;
+  email: string;
+  status: string;
+  expireDate: Date | null;
+  actionDate: Date | null;
+  code: number | null;
+  fullName: string | null;
+  userInviteInvitedByIdTouser?: User | null;
+  organization?: Organization | null;
+  tenant?: Tenant | null;
+  role?: Role | null;
+  userInviteUserIdTouser?: User | null;
+  inviteOrganizationContact?: Array<InviteOrganizationContact>;
+  inviteOrganizationDepartment?: Array<InviteOrganizationDepartment>;
+  inviteOrganizationProject?: Array<InviteOrganizationProject>;
+  inviteOrganizationTeam?: Array<InviteOrganizationTeam>;
+};

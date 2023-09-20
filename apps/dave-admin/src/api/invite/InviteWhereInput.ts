@@ -1,0 +1,35 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { RoleWhereUniqueInput } from "../role/RoleWhereUniqueInput";
+import { InviteOrganizationContactListRelationFilter } from "../inviteOrganizationContact/InviteOrganizationContactListRelationFilter";
+import { InviteOrganizationDepartmentListRelationFilter } from "../inviteOrganizationDepartment/InviteOrganizationDepartmentListRelationFilter";
+import { InviteOrganizationProjectListRelationFilter } from "../inviteOrganizationProject/InviteOrganizationProjectListRelationFilter";
+import { InviteOrganizationTeamListRelationFilter } from "../inviteOrganizationTeam/InviteOrganizationTeamListRelationFilter";
+
+export type InviteWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  token?: StringFilter;
+  email?: StringFilter;
+  status?: StringFilter;
+  expireDate?: DateTimeNullableFilter;
+  actionDate?: DateTimeNullableFilter;
+  code?: IntNullableFilter;
+  fullName?: StringNullableFilter;
+  userInviteInvitedByIdTouser?: UserWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+  role?: RoleWhereUniqueInput;
+  userInviteUserIdTouser?: UserWhereUniqueInput;
+  inviteOrganizationContact?: InviteOrganizationContactListRelationFilter;
+  inviteOrganizationDepartment?: InviteOrganizationDepartmentListRelationFilter;
+  inviteOrganizationProject?: InviteOrganizationProjectListRelationFilter;
+  inviteOrganizationTeam?: InviteOrganizationTeamListRelationFilter;
+};

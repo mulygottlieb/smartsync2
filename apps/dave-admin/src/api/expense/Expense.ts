@@ -1,0 +1,38 @@
+import { Decimal } from "decimal.js";
+import { OrganizationContact } from "../organizationContact/OrganizationContact";
+import { ExpenseCategory } from "../expenseCategory/ExpenseCategory";
+import { Employee } from "../employee/Employee";
+import { Tenant } from "../tenant/Tenant";
+import { OrganizationProject } from "../organizationProject/OrganizationProject";
+import { Organization } from "../organization/Organization";
+import { OrganizationVendor } from "../organizationVendor/OrganizationVendor";
+import { InvoiceItem } from "../invoiceItem/InvoiceItem";
+import { TagExpense } from "../tagExpense/TagExpense";
+
+export type Expense = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  amount: Decimal;
+  typeOfExpense: string | null;
+  notes: string | null;
+  currency: string;
+  valueDate: Date | null;
+  purpose: string | null;
+  taxType: string | null;
+  taxLabel: string | null;
+  rateValue: Decimal | null;
+  receipt: string | null;
+  splitExpense: boolean | null;
+  reference: string | null;
+  status?: "INVOICED" | "UNINVOICED" | "PAID" | "NOT_BILLABLE" | null;
+  organizationContact?: OrganizationContact | null;
+  expenseCategory?: ExpenseCategory | null;
+  employee?: Employee | null;
+  tenant?: Tenant | null;
+  organizationProject?: OrganizationProject | null;
+  organization?: Organization | null;
+  organizationVendor?: OrganizationVendor | null;
+  invoiceItem?: Array<InvoiceItem>;
+  tagExpense?: Array<TagExpense>;
+};

@@ -1,0 +1,38 @@
+import { BooleanFilter } from "../../util/BooleanFilter";
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { IntFilter } from "../../util/IntFilter";
+import { OrganizationProjectWhereUniqueInput } from "../organizationProject/OrganizationProjectWhereUniqueInput";
+import { OrganizationTeamWhereUniqueInput } from "../organizationTeam/OrganizationTeamWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+
+export type OrganizationTaskSettingWhereInput = {
+  isTasksCommentsEnabled?: BooleanFilter;
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  isTasksPrivacyEnabled?: BooleanFilter;
+  isTasksMultipleAssigneesEnabled?: BooleanFilter;
+  isTasksManualTimeEnabled?: BooleanFilter;
+  isTasksGroupEstimationEnabled?: BooleanFilter;
+  isTasksHistoryEnabled?: BooleanFilter;
+  isTasksAcceptanceCriteriaEnabled?: BooleanFilter;
+  isTasksDraftsEnabled?: BooleanFilter;
+  isTasksEstimationInHoursEnabled?: BooleanFilter;
+  isTasksEstimationInStoryPointsEnabled?: BooleanFilter;
+  isTasksProofOfCompletionEnabled?: BooleanFilter;
+  tasksProofOfCompletionType?: StringFilter;
+  isTasksLinkedEnabled?: BooleanFilter;
+  isTasksNotifyLeftEnabled?: BooleanFilter;
+  tasksNotifyLeftPeriodDays?: IntFilter;
+  isTasksAutoCloseEnabled?: BooleanFilter;
+  tasksAutoClosePeriodDays?: IntFilter;
+  isTasksAutoArchiveEnabled?: BooleanFilter;
+  tasksAutoArchivePeriodDays?: IntFilter;
+  isTasksAutoStatusEnabled?: BooleanFilter;
+  organizationProject?: OrganizationProjectWhereUniqueInput;
+  organizationTeam?: OrganizationTeamWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+  organization?: OrganizationWhereUniqueInput;
+};

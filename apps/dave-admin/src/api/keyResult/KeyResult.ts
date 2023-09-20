@@ -1,0 +1,37 @@
+import { OrganizationProject } from "../organizationProject/OrganizationProject";
+import { GoalKpi } from "../goalKpi/GoalKpi";
+import { Employee } from "../employee/Employee";
+import { Tenant } from "../tenant/Tenant";
+import { Organization } from "../organization/Organization";
+import { Task } from "../task/Task";
+import { Goal } from "../goal/Goal";
+import { KeyResultUpdate } from "../keyResultUpdate/KeyResultUpdate";
+
+export type KeyResult = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  name: string;
+  description: string;
+  typeField: string;
+  targetValue: number | null;
+  initialValue: number | null;
+  unit: string | null;
+  update: number;
+  progress: number;
+  deadline: string;
+  hardDeadline: Date | null;
+  softDeadline: Date | null;
+  status: string;
+  weight: string | null;
+  organizationProject?: OrganizationProject | null;
+  goalKpi?: GoalKpi | null;
+  employeeKeyResultOwnerIdToemployee?: Employee;
+  tenant?: Tenant | null;
+  employeeKeyResultLeadIdToemployee?: Employee | null;
+  organization?: Organization | null;
+  task?: Task | null;
+  goalGoalAlignedKeyResultIdTokeyResult?: Array<Goal>;
+  goalKeyResultGoalIdTogoal?: Goal | null;
+  keyResultUpdate?: Array<KeyResultUpdate>;
+};

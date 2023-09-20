@@ -1,0 +1,33 @@
+import { StringFilter } from "../../util/StringFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
+import { DecimalNullableFilter } from "../../util/DecimalNullableFilter";
+import { OrganizationWhereUniqueInput } from "../organization/OrganizationWhereUniqueInput";
+import { TenantWhereUniqueInput } from "../tenant/TenantWhereUniqueInput";
+import { CandidateWhereUniqueInput } from "../candidate/CandidateWhereUniqueInput";
+import { CandidateFeedbackListRelationFilter } from "../candidateFeedback/CandidateFeedbackListRelationFilter";
+import { CandidateInterviewerListRelationFilter } from "../candidateInterviewer/CandidateInterviewerListRelationFilter";
+import { CandidatePersonalQualityListRelationFilter } from "../candidatePersonalQuality/CandidatePersonalQualityListRelationFilter";
+import { CandidateTechnologyListRelationFilter } from "../candidateTechnology/CandidateTechnologyListRelationFilter";
+
+export type CandidateInterviewWhereInput = {
+  id?: StringFilter;
+  createdAt?: DateTimeFilter;
+  updatedAt?: DateTimeFilter;
+  title?: StringFilter;
+  startTime?: DateTimeNullableFilter;
+  endTime?: DateTimeNullableFilter;
+  location?: StringNullableFilter;
+  note?: StringNullableFilter;
+  isArchived?: BooleanNullableFilter;
+  rating?: DecimalNullableFilter;
+  organization?: OrganizationWhereUniqueInput;
+  tenant?: TenantWhereUniqueInput;
+  candidate?: CandidateWhereUniqueInput;
+  candidateFeedback?: CandidateFeedbackListRelationFilter;
+  candidateInterviewer?: CandidateInterviewerListRelationFilter;
+  candidatePersonalQuality?: CandidatePersonalQualityListRelationFilter;
+  candidateTechnology?: CandidateTechnologyListRelationFilter;
+};

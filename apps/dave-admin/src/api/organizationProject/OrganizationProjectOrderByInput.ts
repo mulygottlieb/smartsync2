@@ -1,0 +1,31 @@
+import { SortOrder } from "../../util/SortOrder";
+
+export type OrganizationProjectOrderByInput = {
+  id?: SortOrder;
+  createdAt?: SortOrder;
+  updatedAt?: SortOrder;
+  name?: SortOrder;
+  startDate?: SortOrder;
+  endDate?: SortOrder;
+  billing?: SortOrder;
+  currency?: SortOrder;
+  publicField?: SortOrder;
+  owner?: SortOrder;
+  taskListType?: SortOrder;
+  code?: SortOrder;
+  description?: SortOrder;
+  color?: SortOrder;
+  billable?: SortOrder;
+  billingFlat?: SortOrder;
+  openSource?: SortOrder;
+  projectUrl?: SortOrder;
+  openSourceProjectUrl?: SortOrder;
+  budget?: SortOrder;
+  budgetType?: SortOrder;
+  membersCount?: SortOrder;
+  imageUrl?: SortOrder;
+  imageId?: SortOrder;
+  tenantId?: SortOrder;
+  organizationId?: SortOrder;
+  organizationContactId?: SortOrder;
+};
